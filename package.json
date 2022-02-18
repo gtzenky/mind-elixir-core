@@ -43,8 +43,6 @@
     "jsdoc-to-markdown": "^5.0.0",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
-    "puppeteer": "^5.2.1",
-    "puppeteer-to-istanbul": "^1.4.0",
     "regenerator-runtime": "^0.13.7",
     "style-loader": "^0.23.1",
     "ts-loader": "^9.2.6",
