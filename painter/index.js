@@ -278,7 +278,25 @@ export let exportPng = async function (instance, fileName) {
   a.click()
 }
 
+export const exportCavas = async function (instance, fileName) {
+  if (!instance) throw new Error('Mind-elixir instance is not presented. ---> exportSvg(instance, fileName)') 
+  initVar()
+  $d = instance.container
+  let svgFile = generateSvgDom()
+  const canvas = document.createElement('canvas')
+  canvas.style.display = 'none'
+  const ctx = canvas.getContext('2d')
+
+  let v = await Canvg.fromString(
+    ctx,
+    head + svgFile.outerHTML.replace(/&nbsp;/g, ' ')
+  )
+  v.start()
+  return canvas
+}
+
 export default {
   exportSvg,
   exportPng,
+  exportCavas,
 }
