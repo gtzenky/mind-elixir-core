@@ -278,8 +278,8 @@ export let exportPng = async function (instance, fileName) {
   a.click()
 }
 
-export const exportCavas = async function (instance, fileName) {
-  if (!instance) throw new Error('Mind-elixir instance is not presented. ---> exportSvg(instance, fileName)') 
+export const exportCanvas = async function (instance) {
+  if (!instance) throw new Error('Mind-elixir instance is not presented. ---> exportCanvas(instance)') 
   initVar()
   $d = instance.container
   let svgFile = generateSvgDom()
@@ -298,5 +298,5 @@ export const exportCavas = async function (instance, fileName) {
 export default {
   exportSvg,
   exportPng,
-  exportCavas,
+  exportCanvas,
 }
